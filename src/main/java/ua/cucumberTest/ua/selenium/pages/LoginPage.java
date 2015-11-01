@@ -16,31 +16,31 @@ public class LoginPage extends Page {
         super(driver);
     }
 
-    public void fillEmailField() throws IOException {
-        web.input("EmailField", "admin");
+    public void fillEmailField(String emailValue) throws IOException {
+        web.input("EmailField", emailValue);
     }
 
-    public void fillPasswordField() throws IOException, InstantiationException, IllegalAccessException, ClassNotFoundException {
+    public void fillPasswordField(String pass) throws IOException, InstantiationException, IllegalAccessException, ClassNotFoundException {
         web.clckLink("PassField");
         //web.waitForElementPresent("PassField");
 
         //System.out.println(web.isElementPresent("PassField"));
         //System.out.println(driver.findElement(ui("PassField")).isEnabled());
 
-        web.inputWithoutCleaning("PassFieldInput", "admin");
+        web.inputWithoutCleaning("PassFieldInput", pass);
     }
 
-    public void clickloginButton() throws IOException {
-        web.clckLink("LoginButton");
+    public void clickloginButton(String loginButton) throws IOException {
+        web.clckLink(loginButton);
 
-        if (web.isElementPresent("Logo")) {
+        /*if (web.isElementPresent("Logo")) {
             //log.info
         } else {
 
             //log.ree
         }
         Assert.assertTrue("Incorrect work login form", web.isElementPresent("Logo"));
+        */
     }
-
 
 }

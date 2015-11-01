@@ -11,6 +11,6 @@ import org.junit.runners.Suite;
 		format = {"pretty", "html:target/report/", "json:target/cucumber-report.json"},
 		features = {"src/test/resources/features/"}
 		)
-public class FunctionalRunnerTest {
+public class FunctionalRunnerTest extends TestBase {
 	
 }
