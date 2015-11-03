@@ -25,8 +25,8 @@ public class TestBase {
 
     @BeforeClass
     public static void init() throws MalformedURLException {
-        //webDriverWrapper = new WebDriverWrapper(WebDriverFactory.getInstance());
-        webDriverWrapper = WebDriverFactory.initDriver(PropertyLoader.loadProperty("browser.name"));
+        webDriverWrapper = new WebDriverWrapper(WebDriverFactory.getInstance());
+        //webDriverWrapper = WebDriverFactory.initDriver(PropertyLoader.loadProperty("browser.name"));
 
         webDriverWrapper.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 

@@ -1,5 +1,6 @@
 Feature: Test Login Page
 
+  @Login
   Scenario: Test1 Login to the system
 	Given I navigate to the ellos website
 	And I click Logon link
